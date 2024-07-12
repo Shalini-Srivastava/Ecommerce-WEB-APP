@@ -1,6 +1,7 @@
 import { comparePassword, hashPassword } from "../helpers/authHelper.js";
 import userModel from "../models/userModel.js";
 import JWT from "jsonwebtoken";
+import { toast } from 'react-hot-toast';
 
 
 export const registerController=async (req,res)=>{
@@ -8,7 +9,7 @@ export const registerController=async (req,res)=>{
     const {name,email,password,phone,address,answer}=req.body
     // validations
     if(!name){
-       return res.send({message:"name is required"})
+       return res.send({message:"name is required"}) 
     }
     if(!email){
         return res.send({message:"email is required"})
