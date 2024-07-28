@@ -58,7 +58,7 @@ export const updateCategoryController = async (req, res) => {
 };
 
 // get all cat
-export const categoryController = async (req, res) => {
+export const categoryControlller = async (req, res) => {
   try {
     const category = await categoryModel.find({});
     res.status(200).send({
